@@ -6,6 +6,7 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { AuthModule } from './auth/auth.module';
 import { RecordsModule } from './records/records.module';
+import { IngestModule } from './ingest/ingest.module';
 
 @Module({
   imports: [
@@ -31,6 +32,8 @@ import { RecordsModule } from './records/records.module';
     AuthModule,
 
     RecordsModule,
+
+    IngestModule,
   ],
   // 4) Controlador base (opcional, pero estándar en un proyecto Nest)
   controllers: [AppController],
