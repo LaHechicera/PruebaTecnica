@@ -1,61 +1,29 @@
-# Frontend - Vue 3 + Vuetify 3
+# Frontend (Vue 3 + Vuetify 3) - MVP
 
-## 📋 Objetivo
+Este frontend está hecho para cubrir **lo mínimo viable**:
+- Login con JWT (POST `/auth/login`)
+- Guardar token en `localStorage`
+- Tabla con records (GET `/records` con Bearer token)
+- Formulario para crear records (POST `/records`)
 
-Crear una aplicación web en Vue 3 con Vuetify 3 que:
-1. Permita login con JWT
-2. Muestre una tabla de records
-3. Permita crear/editar records
-4. Tenga una interfaz con sidebar, toolbar y main section
+> Nota: El backend incluido actualmente no expone endpoint de actualización (PUT/PATCH), por eso el botón **Editar**
+> solo precarga el formulario y al guardar realiza **POST** (crea un nuevo record).
 
-## 🚀 Setup Inicial
+## Requisitos
+- Node 18+ recomendado
 
-### 1. Crear Proyecto Vue 3
-### 2. Instalar Vuetify 3
+## Configuración
+1. Copiar `.env.example` a `.env`
+2. Ajustar la URL del backend si corresponde:
+   - `VITE_API_BASE_URL=http://localhost:3000`
 
-Sigue la guía oficial: https://vuetifyjs.com/en/getting-started/installation/
+## Ejecutar
+```bash
+cd frontend
+npm install
+npm run dev
+```
 
-## ✅ Pantallas a Implementar
-
-### 1. Login (`/login`)
-
-- Formulario con campos:
-  - Email (text field)
-  - Password (password field)
-- Botón "Iniciar Sesión"
-- Al hacer login:
-  - Guardar token en localStorage
-  - Redirigir a `/records`
-- Mostrar errores si las credenciales son inválidas
-
-### 2. Records (`/records`)
-
-- **Tabla Vuetify**
-
-### 3. Layout Base
-
-- AppBar con:
-  - Título
-  - Email del usuario logueado
-  - Botón "Cerrar Sesión"
-- Navigation drawer
-
-## 🔐 Autenticación
-
-### Store de Auth (`stores/auth.ts`)
-
-
-## 🌐 Cliente API
-
-Debes usar Axios. Crea `src/services/api.ts` con:
-- Configuración de baseURL
-- Interceptor para agregar token JWT en headers
-- Interceptor para manejar errores 401 (redirigir a login)
-
-## 📱 Responsive
-
-- Usa el sistema de grid de Vuetify (`v-row`, `v-col`)
-- La tabla debe ser responsive (scroll horizontal en móviles o cards)
-
-**¡Sigue la guía de instalación de Vuetify 3 y empieza con el login!**
-
+## Credenciales
+- Email: `admin@test.com`
+- Password: `123456`
