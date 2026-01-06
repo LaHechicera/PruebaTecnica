@@ -1,5 +1,14 @@
 # Prueba Técnica -
 
+
+## Nota del Candidato
+
+Esta entrega corresponde a una implementación funcional de tipo MVP, orientada a demostrar el flujo completo solicitado en la prueba técnica.
+
+Se desarrolló una API en NestJS con autenticación JWT y persistencia en MySQL, una interfaz web en Vue 3 + Vuetify 3 para autenticación y visualización de registros, y la conexión directa de la base de datos en Laragon a Power BI mediante conector oficial ODBC para la generación de visualizaciones.
+
+El enfoque de la solución prioriza la integración end-to-end y el correcto funcionamiento del pipeline por sobre una implementación exhaustiva del procesamiento de PDF.
+
 ## 📋 Descripción del Desafío
 
 Este repositorio contiene un proyecto base para implementar un **pipeline completo de ingesta de datos** desde un PDF hacia una base de datos MySQL, con una API REST en NestJS y una interfaz web en Vue 3 + Vuetify 3, terminando de mostrar los datos en un PowerBI con una conexión directa desde la base de datos.
